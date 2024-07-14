@@ -1,3 +1,7 @@
+
+
+
+
 public class LinearArray {
 
     public static int inearsearch(int arr[],int n, int target)

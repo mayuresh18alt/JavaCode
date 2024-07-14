@@ -5,33 +5,30 @@ public class Palindrome {
 
     public static void main(String[] args) {
         
-        Scanner sc=new Scanner(System.in);
+       Scanner sc=new Scanner(System.in);
+        
+       int n;
+       int reverse=0;
+       int reminder=0;
 
-        int reverse=0;
-        int rem;
-        int num;
+       System.out.println("enter the value of the n");
+       n=sc.nextInt();
 
-       
+       int temp=n;
 
-        System.out.println("enter the value of the num");
-        num=sc.nextInt();
-
-       int temp=num;
-
-        while (temp!=0) {
-
-            rem=temp%10;
-            reverse=reverse*10+rem;
-            temp=temp/10;
-        }
-
-            if(num==reverse)
-            {
-                System.out.println(num+"\n is palindrome nuber");
-            }
-            else
-            {
-                System.out.println(num+"\n is not palindrome nuber");
-            }
+       while(temp!=0)
+       {
+        reminder=temp%10;
+        reverse=reverse*10+reminder;
+        temp=temp/10;
+       }
+       if(reverse!=n)
+       {
+        System.out.println(n+" "+"the number is not a palindrome");
+       }
+       else
+       {
+        System.out.println(n+" "+"the number is a palindrome");
+       }
     }
 }

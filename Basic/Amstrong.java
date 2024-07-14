@@ -9,25 +9,27 @@ public class Amstrong {
 
         int num;
         int rem;
-        int result=0;
+        int reverse=0;
 
-        System.out.println("enter the value for the num");
+        System.out.println("enter the value of the num");
         num=sc.nextInt();
 
         int temp=num;
-        while (temp!=0) {
 
+        while(temp!=0)
+        {
             rem=temp%10;
-            result=rem*rem*rem;
+            reverse=reverse+rem*rem*rem;
             temp=temp/10;
         }
-        if (result==num)
+        if(reverse==num)
         {
-            System.out.println(num+"\n is Amstrong number");
+            System.out.println(num+" "+"is amstrong number");
         }
         else
         {
-            System.out.println(num+"\n is not Amstrong number");
+            System.out.println(num+" "+"is not amstrong number");
         }
+
     }
 }
